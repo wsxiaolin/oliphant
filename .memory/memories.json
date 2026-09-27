@@ -21,11 +21,11 @@
       "at": "2026-09-27T03:05:47.208Z"
     },
     "status": "active",
-    "verifiedAt": "2026-09-27T03:06:30.066Z",
-    "verifications": 2,
+    "verifiedAt": "2026-09-27T03:07:29.825Z",
+    "verifications": 3,
     "failures": 1,
     "lastVerdict": "ok",
-    "lastScore": 0.7
+    "lastScore": 0.75
   },
   {
     "id": "mem_83c21da5b0bc",
@@ -49,11 +49,11 @@
       "at": "2026-09-27T03:05:47.252Z"
     },
     "status": "active",
-    "verifiedAt": "2026-09-27T03:06:30.068Z",
-    "verifications": 2,
+    "verifiedAt": "2026-09-27T03:07:29.827Z",
+    "verifications": 3,
     "failures": 1,
     "lastVerdict": "ok",
-    "lastScore": 0.7
+    "lastScore": 0.75
   },
   {
     "id": "mem_1488333eae67",
@@ -77,11 +77,11 @@
       "at": "2026-09-27T03:05:47.296Z"
     },
     "status": "active",
-    "verifiedAt": "2026-09-27T03:06:30.070Z",
-    "verifications": 2,
+    "verifiedAt": "2026-09-27T03:07:29.828Z",
+    "verifications": 3,
     "failures": 1,
     "lastVerdict": "ok",
-    "lastScore": 0.7
+    "lastScore": 0.75
   },
   {
     "id": "mem_68fa9db6008b",
@@ -104,11 +104,11 @@
       "at": "2026-09-27T03:05:47.344Z"
     },
     "status": "active",
-    "verifiedAt": "2026-09-27T03:06:30.071Z",
-    "verifications": 3,
+    "verifiedAt": "2026-09-27T03:07:29.828Z",
+    "verifications": 4,
     "failures": 0,
     "lastVerdict": "ok",
-    "lastScore": 0.9
+    "lastScore": 0.95
   },
   {
     "id": "mem_3bcf6c2297c6",
@@ -131,10 +131,10 @@
       "at": "2026-09-27T03:05:47.391Z"
     },
     "status": "active",
-    "verifiedAt": "2026-09-27T03:06:30.071Z",
-    "verifications": 3,
+    "verifiedAt": "2026-09-27T03:07:29.829Z",
+    "verifications": 4,
     "failures": 0,
     "lastVerdict": "ok",
-    "lastScore": 0.9
+    "lastScore": 0.95
   }
 ]

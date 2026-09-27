@@ -29,11 +29,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JamieAtGit/oliphant.git"
+    "url": "git+https://github.com/wsxiaolin/oliphant.git"
   },
   "bugs": {
-    "url": "https://github.com/JamieAtGit/oliphant/issues"
+    "url": "https://github.com/wsxiaolin/oliphant/issues"
   },
-  "homepage": "https://github.com/JamieAtGit/oliphant#readme",
+  "homepage": "https://github.com/wsxiaolin/oliphant#readme",
   "sideEffects": false
 }

@@ -149,7 +149,7 @@ Your own notes live outside the `<!-- OLIPHANT:BEGIN/END -->` block and are neve
 
 ```yaml
 # .github/workflows/memory.yml
-- uses: JamieAtGit/oliphant@v1
+- uses: wsxiaolin/oliphant@v1
   with:
     skip-commands: false   # true if you don't want command receipts in CI
 ```
