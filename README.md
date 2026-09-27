@@ -27,6 +27,14 @@ and your **CI fails until a human retires the lie**.
 
 </div>
 
+## The 30-second demo
+
+<p align="center">
+  <img src="assets/demo.gif" alt="oliphant demo — a memory rots, doctor catches it, CI goes red, a human retires the lie" width="794">
+</p>
+
+*A memory lies → `doctor` re-runs its receipts → CI exits 1 → a human `forget`s it. Loop closed.*
+
 ---
 
 ## The problem

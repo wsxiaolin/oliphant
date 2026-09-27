@@ -1,12 +1,18 @@
 # npm auto-publish: cut a GitHub Release (tag v*), CI tests, then publishes to npm.
 #
-# One-time setup on your side (≈2 minutes):
-#   1. npmjs.com → Access Tokens → Generate New Token → "Granular Access Token"
-#      - Packages: Read and write
-#      - Scope:    only `oliphant`
-#   2. GitHub repo → Settings → Secrets and variables → Actions →
-#      New repository secret → name: NPM_TOKEN → paste the token.
-#   3. Done. Every GitHub Release now ships to npm automatically.
+# ── Auth: two supported paths (npm mandates 2FA on accounts, NOT on CI) ──
+#
+#   A) Granular token (works from the very first release):
+#      1. npmjs.com → Access Tokens → Generate New Token → Granular Access
+#         (Packages: Read and write, scoped to `oliphant`)
+#         ⚠ create the token AFTER enabling 2FA — enabling 2FA revokes old tokens.
+#      2. GitHub repo → Settings → Secrets → Actions → NPM_TOKEN = that token
+#
+#   B) Trusted Publishers (tokenless, OIDC — npm GA since 2025-07):
+#      1. Publish the first version once (locally, or via path A) to claim the name
+#      2. npmjs.com → your package → Settings → Trusted Publisher → add:
+#         repository: wsxiaolin/oliphant, workflow: publish.yml
+#      3. No NPM_TOKEN secret needed; GitHub mints a short-lived OIDC token per run.
 #
 # Releasing:
 #   git tag v0.1.0 && git push origin v0.1.0
@@ -22,13 +28,12 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write   # required for npm --provenance
+      id-token: write   # OIDC (trusted publishing) + provenance
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          registry-url: https://registry.npmjs.org/
       - name: Test before publishing
         run: node --test
       - name: Publish
@@ -39,6 +44,14 @@ jobs:
             echo "tag $GITHUB_REF_NAME does not match package.json version $JSTAG — bump it first."
             exit 1
           fi
+          # npm ≥ 11 for OIDC trusted publishing
+          npm install -g npm@latest >/dev/null
+          if [ -n "$NPM_TOKEN" ]; then
+            echo "auth: granular token (path A)"
+            npm config set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
+          else
+            echo "auth: OIDC trusted publisher (path B) — no token set"
+          fi
           npm publish --provenance --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
