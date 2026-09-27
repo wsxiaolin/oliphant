@@ -1,0 +1,36 @@
+# AGENTS.md
+
+Instructions for coding agents working in this repo.
+
+
+<!-- OLIPHANT:BEGIN — machine memory, do not edit by hand. Run `npx oliphant compile`. -->
+# Project Memory (oliphant)
+
+> Every line below carries receipts, re-verified by `npx oliphant doctor`. Never trust a memory without receipts.
+
+## model
+
+- **decision** — memory records are claims backed by receipts: path, grep, command
+  receipts: `/EVIDENCE_TYPES/` in `src/memory.js`
+
+## design
+
+- **decision** — dead memories keep failing CI until a human retires them
+  receipts: `/until a human/` in `src/doctor.js`
+
+## compile
+
+- **fact** — compile output is idempotent: writeFileIfChanged compares full content
+  receipts: `/writeFileIfChanged/` in `src/compile.js`
+
+## deps
+
+- **fact** — the whole tool has zero npm dependencies, node >= 18 only
+  receipts: `package.json`
+
+## mcp
+
+- **gotcha** — MCP server is hand-rolled JSON-RPC over stdio in one file
+  receipts: `src/mcp.js`
+
+_Recall more: `npx oliphant recall "<topic>"` · Verify: `npx oliphant doctor`<!-- OLIPHANT:END -->

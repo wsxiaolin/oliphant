@@ -1,0 +1,35 @@
+name: 'oliphant doctor'
+description: 'Re-verify your repo agent memory against reality. Fails when dead (lying) memories exist until they are retired.'
+author: 'oliphant contributors'
+
+branding:
+  icon: 'check-circle'
+  color: 'purple'
+
+inputs:
+  skip-commands:
+    description: 'Skip command receipts (for sandboxes / untrusted CI).'
+    required: false
+    default: 'false'
+  half-life-days:
+    description: 'Memory freshness half-life in days (default 30).'
+    required: false
+    default: '30'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Run oliphant doctor
+      shell: bash
+      run: |
+        # no .memory/ → nothing to verify (e.g. forks before adopting oliphant)
+        if [ ! -f .memory/memories.json ]; then
+          echo "oliphant: no .memory/ in this repo — skipping."
+          exit 0
+        fi
+        ARGS=(doctor --ci)
+        if [ "${{ inputs.skip-commands }}" = "true" ]; then
+          ARGS+=(--skip-commands)
+        fi
+        ARGS+=(--half-life "${{ inputs.half-life-days }}")
+        npx -y oliphant@latest "${ARGS[@]}"

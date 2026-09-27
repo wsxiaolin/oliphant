@@ -1,0 +1,140 @@
+[
+  {
+    "id": "mem_c0d74884e77d",
+    "ts": "2026-09-27T03:05:47.208Z",
+    "kind": "decision",
+    "claim": "memory records are claims backed by receipts: path, grep, command",
+    "evidence": [
+      {
+        "type": "grep",
+        "value": "EVIDENCE_TYPES",
+        "path": "src/memory.js"
+      }
+    ],
+    "tags": [
+      "model"
+    ],
+    "confidence": 0.8,
+    "source": {
+      "agent": "human",
+      "via": "cli",
+      "at": "2026-09-27T03:05:47.208Z"
+    },
+    "status": "active",
+    "verifiedAt": "2026-09-27T03:06:30.066Z",
+    "verifications": 2,
+    "failures": 1,
+    "lastVerdict": "ok",
+    "lastScore": 0.7
+  },
+  {
+    "id": "mem_83c21da5b0bc",
+    "ts": "2026-09-27T03:05:47.252Z",
+    "kind": "decision",
+    "claim": "dead memories keep failing CI until a human retires them",
+    "evidence": [
+      {
+        "type": "grep",
+        "value": "until a human",
+        "path": "src/doctor.js"
+      }
+    ],
+    "tags": [
+      "design"
+    ],
+    "confidence": 0.8,
+    "source": {
+      "agent": "human",
+      "via": "cli",
+      "at": "2026-09-27T03:05:47.252Z"
+    },
+    "status": "active",
+    "verifiedAt": "2026-09-27T03:06:30.068Z",
+    "verifications": 2,
+    "failures": 1,
+    "lastVerdict": "ok",
+    "lastScore": 0.7
+  },
+  {
+    "id": "mem_1488333eae67",
+    "ts": "2026-09-27T03:05:47.297Z",
+    "kind": "fact",
+    "claim": "compile output is idempotent: writeFileIfChanged compares full content",
+    "evidence": [
+      {
+        "type": "grep",
+        "value": "writeFileIfChanged",
+        "path": "src/compile.js"
+      }
+    ],
+    "tags": [
+      "compile"
+    ],
+    "confidence": 0.8,
+    "source": {
+      "agent": "human",
+      "via": "cli",
+      "at": "2026-09-27T03:05:47.296Z"
+    },
+    "status": "active",
+    "verifiedAt": "2026-09-27T03:06:30.070Z",
+    "verifications": 2,
+    "failures": 1,
+    "lastVerdict": "ok",
+    "lastScore": 0.7
+  },
+  {
+    "id": "mem_68fa9db6008b",
+    "ts": "2026-09-27T03:05:47.344Z",
+    "kind": "fact",
+    "claim": "the whole tool has zero npm dependencies, node >= 18 only",
+    "evidence": [
+      {
+        "type": "path",
+        "value": "package.json"
+      }
+    ],
+    "tags": [
+      "deps"
+    ],
+    "confidence": 0.8,
+    "source": {
+      "agent": "human",
+      "via": "cli",
+      "at": "2026-09-27T03:05:47.344Z"
+    },
+    "status": "active",
+    "verifiedAt": "2026-09-27T03:06:30.071Z",
+    "verifications": 3,
+    "failures": 0,
+    "lastVerdict": "ok",
+    "lastScore": 0.9
+  },
+  {
+    "id": "mem_3bcf6c2297c6",
+    "ts": "2026-09-27T03:05:47.391Z",
+    "kind": "gotcha",
+    "claim": "MCP server is hand-rolled JSON-RPC over stdio in one file",
+    "evidence": [
+      {
+        "type": "path",
+        "value": "src/mcp.js"
+      }
+    ],
+    "tags": [
+      "mcp"
+    ],
+    "confidence": 0.8,
+    "source": {
+      "agent": "human",
+      "via": "cli",
+      "at": "2026-09-27T03:05:47.391Z"
+    },
+    "status": "active",
+    "verifiedAt": "2026-09-27T03:06:30.071Z",
+    "verifications": 3,
+    "failures": 0,
+    "lastVerdict": "ok",
+    "lastScore": 0.9
+  }
+]

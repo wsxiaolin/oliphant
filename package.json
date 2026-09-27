@@ -1,0 +1,39 @@
+{
+  "name": "oliphant",
+  "version": "0.1.0",
+  "description": "🐘 Git-native, self-verifying memory for coding agents. Every memory ships with receipts — stale memories get caught in CI, not in your agent's head.",
+  "keywords": [
+    "ai", "agent", "memory", "mcp", "model-context-protocol",
+    "claude-code", "codex", "cursor", "agents-md", "context-engineering",
+    "llm", "developer-tools", "cli", "git-native", "local-first"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "oliphant": "bin/oliphant.js",
+    "oli": "bin/oliphant.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "bin",
+    "src",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "smoke": "bash examples/demo.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamieAtGit/oliphant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JamieAtGit/oliphant/issues"
+  },
+  "homepage": "https://github.com/JamieAtGit/oliphant#readme",
+  "sideEffects": false
+}

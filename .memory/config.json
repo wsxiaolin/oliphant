@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "budgetTokens": 2000,
+  "halfLifeDays": 30,
+  "emit": {
+    "agents": true,
+    "claude": true,
+    "cursor": true,
+    "skill": true
+  },
+  "ci": {
+    "minFreshness": 0.75,
+    "failOn": "dead"
+  }
+}

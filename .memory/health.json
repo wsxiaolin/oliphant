@@ -1,0 +1,86 @@
+{
+  "at": "2026-09-27T03:06:30.072Z",
+  "checked": 5,
+  "ok": 5,
+  "rotting": 0,
+  "dead": 0,
+  "skipped": 0,
+  "freshness": 0.78,
+  "results": [
+    {
+      "id": "mem_c0d74884e77d",
+      "verdict": "ok",
+      "score": 0.7,
+      "checks": [
+        {
+          "ok": true,
+          "detail": "found in src/memory.js",
+          "checkedAt": "2026-09-27T03:06:30.066Z",
+          "type": "grep",
+          "value": "EVIDENCE_TYPES"
+        }
+      ],
+      "action": null
+    },
+    {
+      "id": "mem_83c21da5b0bc",
+      "verdict": "ok",
+      "score": 0.7,
+      "checks": [
+        {
+          "ok": true,
+          "detail": "found in src/doctor.js",
+          "checkedAt": "2026-09-27T03:06:30.068Z",
+          "type": "grep",
+          "value": "until a human"
+        }
+      ],
+      "action": null
+    },
+    {
+      "id": "mem_1488333eae67",
+      "verdict": "ok",
+      "score": 0.7,
+      "checks": [
+        {
+          "ok": true,
+          "detail": "found in src/compile.js",
+          "checkedAt": "2026-09-27T03:06:30.070Z",
+          "type": "grep",
+          "value": "writeFileIfChanged"
+        }
+      ],
+      "action": null
+    },
+    {
+      "id": "mem_68fa9db6008b",
+      "verdict": "ok",
+      "score": 0.9,
+      "checks": [
+        {
+          "ok": true,
+          "detail": "exists (1044 bytes)",
+          "checkedAt": "2026-09-27T03:06:30.071Z",
+          "type": "path",
+          "value": "package.json"
+        }
+      ],
+      "action": null
+    },
+    {
+      "id": "mem_3bcf6c2297c6",
+      "verdict": "ok",
+      "score": 0.9,
+      "checks": [
+        {
+          "ok": true,
+          "detail": "exists (8098 bytes)",
+          "checkedAt": "2026-09-27T03:06:30.071Z",
+          "type": "path",
+          "value": "src/mcp.js"
+        }
+      ],
+      "action": null
+    }
+  ]
+}

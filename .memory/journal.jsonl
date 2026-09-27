@@ -1,0 +1,24 @@
+{"type":"repo.initialized","at":"2026-09-27T03:05:47.141Z"}
+{"type":"memory.added","id":"mem_c0d74884e77d","kind":"decision","claim":"memory records are claims backed by receipts: path, grep, command","tags":["model"],"evidence":[{"type":"grep","value":"EVIDENCE_TYPES","path":"src/memory.js"}],"at":"2026-09-27T03:05:47.209Z"}
+{"type":"memory.added","id":"mem_83c21da5b0bc","kind":"decision","claim":"dead memories keep failing CI until a human retires them","tags":["design"],"evidence":[{"type":"grep","value":"until a human","path":"src/doctor.js"}],"at":"2026-09-27T03:05:47.252Z"}
+{"type":"memory.added","id":"mem_1488333eae67","kind":"fact","claim":"compile output is idempotent: writeFileIfChanged compares full content","tags":["compile"],"evidence":[{"type":"grep","value":"writeFileIfChanged","path":"src/compile.js"}],"at":"2026-09-27T03:05:47.297Z"}
+{"type":"memory.added","id":"mem_68fa9db6008b","kind":"fact","claim":"the whole tool has zero npm dependencies, node >= 18 only","tags":["deps"],"evidence":[{"type":"path","value":"package.json"}],"at":"2026-09-27T03:05:47.346Z"}
+{"type":"memory.added","id":"mem_3bcf6c2297c6","kind":"gotcha","claim":"MCP server is hand-rolled JSON-RPC over stdio in one file","tags":["mcp"],"evidence":[{"type":"path","value":"src/mcp.js"}],"at":"2026-09-27T03:05:47.392Z"}
+{"type":"memory.updated","id":"mem_c0d74884e77d","patch":{"verifiedAt":"2026-09-27T03:05:47.208Z","lastVerdict":"rotting","lastScore":0.8,"failures":1},"at":"2026-09-27T03:05:51.807Z"}
+{"type":"memory.updated","id":"mem_83c21da5b0bc","patch":{"verifiedAt":"2026-09-27T03:05:47.252Z","lastVerdict":"rotting","lastScore":0.8,"failures":1},"at":"2026-09-27T03:05:51.807Z"}
+{"type":"memory.updated","id":"mem_1488333eae67","patch":{"verifiedAt":"2026-09-27T03:05:47.297Z","lastVerdict":"rotting","lastScore":0.8,"failures":1},"at":"2026-09-27T03:05:51.808Z"}
+{"type":"memory.updated","id":"mem_68fa9db6008b","patch":{"verifiedAt":"2026-09-27T03:05:51.808Z","verifications":1,"lastVerdict":"ok","lastScore":0.8},"at":"2026-09-27T03:05:51.808Z"}
+{"type":"memory.updated","id":"mem_3bcf6c2297c6","patch":{"verifiedAt":"2026-09-27T03:05:51.808Z","verifications":1,"lastVerdict":"ok","lastScore":0.8},"at":"2026-09-27T03:05:51.808Z"}
+{"type":"doctor.run","checked":5,"dead":0,"at":"2026-09-27T03:05:51.808Z"}
+{"type":"memory.updated","id":"mem_c0d74884e77d","patch":{"verifiedAt":"2026-09-27T03:06:30.012Z","verifications":1,"lastVerdict":"ok","lastScore":0.65},"at":"2026-09-27T03:06:30.014Z"}
+{"type":"memory.updated","id":"mem_83c21da5b0bc","patch":{"verifiedAt":"2026-09-27T03:06:30.014Z","verifications":1,"lastVerdict":"ok","lastScore":0.65},"at":"2026-09-27T03:06:30.015Z"}
+{"type":"memory.updated","id":"mem_1488333eae67","patch":{"verifiedAt":"2026-09-27T03:06:30.015Z","verifications":1,"lastVerdict":"ok","lastScore":0.65},"at":"2026-09-27T03:06:30.015Z"}
+{"type":"memory.updated","id":"mem_68fa9db6008b","patch":{"verifiedAt":"2026-09-27T03:06:30.015Z","verifications":2,"lastVerdict":"ok","lastScore":0.85},"at":"2026-09-27T03:06:30.015Z"}
+{"type":"memory.updated","id":"mem_3bcf6c2297c6","patch":{"verifiedAt":"2026-09-27T03:06:30.016Z","verifications":2,"lastVerdict":"ok","lastScore":0.85},"at":"2026-09-27T03:06:30.016Z"}
+{"type":"doctor.run","checked":5,"dead":0,"at":"2026-09-27T03:06:30.016Z"}
+{"type":"memory.updated","id":"mem_c0d74884e77d","patch":{"verifiedAt":"2026-09-27T03:06:30.066Z","verifications":2,"lastVerdict":"ok","lastScore":0.7},"at":"2026-09-27T03:06:30.066Z"}
+{"type":"memory.updated","id":"mem_83c21da5b0bc","patch":{"verifiedAt":"2026-09-27T03:06:30.068Z","verifications":2,"lastVerdict":"ok","lastScore":0.7},"at":"2026-09-27T03:06:30.070Z"}
+{"type":"memory.updated","id":"mem_1488333eae67","patch":{"verifiedAt":"2026-09-27T03:06:30.070Z","verifications":2,"lastVerdict":"ok","lastScore":0.7},"at":"2026-09-27T03:06:30.070Z"}
+{"type":"memory.updated","id":"mem_68fa9db6008b","patch":{"verifiedAt":"2026-09-27T03:06:30.071Z","verifications":3,"lastVerdict":"ok","lastScore":0.9},"at":"2026-09-27T03:06:30.071Z"}
+{"type":"memory.updated","id":"mem_3bcf6c2297c6","patch":{"verifiedAt":"2026-09-27T03:06:30.071Z","verifications":3,"lastVerdict":"ok","lastScore":0.9},"at":"2026-09-27T03:06:30.071Z"}
+{"type":"doctor.run","checked":5,"dead":0,"at":"2026-09-27T03:06:30.071Z"}
