@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 export function tmpRepo({ files = {} } = {}) {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'oliphant-test-'));
@@ -13,7 +14,8 @@ export function tmpRepo({ files = {} } = {}) {
   return dir;
 }
 
-export const OLIPHANT_BIN = new URL('../bin/oliphant.js', import.meta.url).pathname;
+// fileURLToPath, NOT url.pathname — pathname breaks on Windows (`/C:/...`).
+export const OLIPHANT_BIN = fileURLToPath(new URL('../bin/oliphant.js', import.meta.url));
 
 export async function runCli(args, cwd) {
   const { execFile } = await import('node:child_process');
