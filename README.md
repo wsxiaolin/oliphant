@@ -17,6 +17,7 @@ Every memory ships with **receipts** — file paths, grep patterns, commands.
 When reality changes and a memory stops being true, `oliphant doctor` catches it,
 and your **CI fails until a human retires the lie**.
 
+[![npm](https://img.shields.io/npm/v/oliphant)](https://www.npmjs.com/package/oliphant)
 [![CI](https://img.shields.io/badge/CI-node--test%20%E2%9C%93-brightgreen)](.github/workflows/ci.yml)
 [![deps](https://img.shields.io/badge/dependencies-0-blue)](package.json)
 [![node](https://img.shields.io/badge/node-%3E%3D18-green)](package.json)
